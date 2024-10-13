@@ -9,7 +9,7 @@ const copy = async () => {
 
     try {
         try {
-            await access('./files_copy', constants.F_OK);
+            await access(`${__dirname}\\files_copy`, constants.F_OK);
             console.log('FS operation failed');
           } catch (err) {
             await cp(`${__dirname}\\files`, `${__dirname}\\files_copy`, { recursive: true });
